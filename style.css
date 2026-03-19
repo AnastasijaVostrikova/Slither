@@ -1,0 +1,133 @@
+
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+
+  background-image: url("https://slithergame.io/cache/data/image/game/slithergame-favicon-m300x300.png");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+
+  color: #4B0082;
+
+  .iphone-front,
+.iphone-back{
+
+    /* Enable 3D transforms */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    /* We are using two separate divs for the front and back of the
+       phone. This will hide the divs when they are flipped, so that the
+       opposite side can be seen:  */
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    width:200px;
+    height:333px;
+
+    position:absolute;
+    top:50%;
+    left:20%;
+    margin:-166px 0 0 -100px;
+
+    background:url(https://slithergame.io/cache/data/image/game/slithergame-favicon-m300x300.png) no-repeat left center;
+
+    /* Animate the transitions */
+    transition:0.8s;
+}
+
+.iphone-back{
+
+    /* The back side is flipped 180 deg by default */
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+
+    background-position:right center;
+}
+
+.container:hover .iphone-front{
+    /* When the container is hovered, flip the front side and hide it .. */
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+}
+
+.container:hover .iphone-back{
+    /* .. at the same time flip the back side into visibility */
+    transform:rotateY(360deg);
+    -webkit-transform:rotateY(360deg);
+}
+}
+
+.title {
+  color: #920FFF;
+  font-size: 2.5rem;
+  text-shadow: 
+    1px 1px 0 #ccc,
+    2px 2px 0 #bbb,
+    3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.date {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.poem {
+  column-count: 2;
+  column-gap: 40px;
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: left;
+  line-height: 1.8;
+  font-family: Georgia, serif;
+
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.poem:hover {
+  transform: perspective(1000px) rotateY(8deg) rotateX(4deg);
+}
+
+@media (max-width: 600px) {
+  .poem {
+    column-count: 1;
+  }
+}
+
+.semester {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.name-label {
+  font-size: 1.5rem;
+
+  .container{
+
+    /* How pronounced should the 3D effects be */
+    perspective: 800px;
+    -webkit-perspective: 800px;
+
+    background: radial-gradient(#e0e0e0, #aaa);
+    width:480px;
+    height:480px;
+    margin:0 auto;
+    border-radius:6px;
+    position:relative;
+}
+
+
+}
